@@ -31,7 +31,7 @@
 article{
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 3rem);
+    min-height: 100vh;
 }
 
 html{
@@ -42,11 +42,6 @@ html{
 body{
     min-height: 100vh;
 
-}
-
-@font-face {
-    font-family: 'Hanken Grotesk';
-    src: URL(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
 }
 
 .grey{
@@ -223,10 +218,10 @@ button:focus{
 }
 
 .attribution{
-    margin-block: 1rem;
     text-align: center; 
     color: var(--neutralblue27); 
     font-size: 0.8rem;
+    margin-block: 2rem;
 }
 
 a{
@@ -239,6 +234,10 @@ a{
         font-size: 18px;
     }
 
+    body{
+        min-height: 1080px;
+    }
+
 
     article{
         justify-content: center;
@@ -246,7 +245,6 @@ a{
 
     .container{
         max-width: 730px;
-        transform: translateY(1.5rem);
         grid-template-columns: repeat(2,1fr);
     }
 
@@ -276,5 +274,12 @@ a{
     
     h2.small{
         font-size: 1.7rem;
+    }
+
+    .attribution{
+        position: absolute;
+        bottom: 1rem;
+        right: 50%;
+        transform: translateX(50%);
     }
 }
