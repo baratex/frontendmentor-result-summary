@@ -1,0 +1,280 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --red: hsl(0, 100%, 67%);
+    --orange: hsl(39, 100%, 56%);
+    --green: hsl(166, 100%, 37%);
+    --blue: hsl(234, 85%, 45%);
+
+    --bgred: hsl(0, 100%, 67%, 0.04);
+    --bgorange: hsl(39, 100%, 56%, 0.04);
+    --bggreen: hsl(166, 100%, 37%, 0.04);
+    --bgbluee: hsl(234, 85%, 45%, 0.04);
+
+    --bgblue: hsl(252, 100%, 67%);
+    --bgroyalblue: hsl(241, 81%, 54%);
+    --violetcircle: hsla(256, 72%, 46%, 1);
+    --bluecircle: hsla(241, 72%, 46%, 0);
+
+    --neutral100: hsl(0, 0%, 100%);
+    --neutralblue96: hsl(221, 100%, 96%);
+    --neutralblue89: hsl(241, 100%, 89%);
+    --neutralblue27: hsl(224, 30%, 27%);
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 3rem);
+}
+
+html{
+    font-family: 'Hanken Grotesk';
+    font-weight: 500;
+}
+
+body{
+    min-height: 100vh;
+
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: URL(/assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+}
+
+.grey{
+    color: var(--neutralblue89);
+}
+
+.darkgrey{
+    color:var(--neutralblue89);
+    opacity: 50%;
+}
+
+.white{
+    color: var(--neutral100);
+}
+
+h1{
+    font-size: 1.1rem;
+}
+
+.overall p{
+    font-size: 1rem;
+}
+
+h2.big {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+h2.small{
+    font-size: 1.5rem;
+}
+
+.container{
+    display: grid;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 1.8rem;
+    box-shadow: 0 0 30px var(--neutralblue96);
+}
+
+.overall,
+.summary{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.overall{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255,0,0, 0.3);
+    align-items: center;
+    justify-content:center;
+    gap: 1rem;
+    padding-block: 1.8rem;
+    background: linear-gradient(to bottom, var(--bgblue),
+    var(--bgroyalblue));
+    border-radius: 0 0 1.8rem 1.8rem;
+}
+
+p.center{
+    padding-inline: 2.8rem;
+    text-align: center;
+}
+
+.circle{
+    margin-block: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-radius: 50%;
+    width: 140px;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(to bottom, var(--violetcircle),
+    var(--bluecircle));
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.25rem 1.75rem;
+}
+
+.summary > h3{
+    font-size: 1.1rem;
+    color: var(--neutralblue27);
+    margin-bottom: 0.5rem;
+}
+
+.summary p{
+    font-size: 1rem;
+}
+.category{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.15rem 0.8rem;
+    border-radius: 10px;
+}
+
+.c0{
+    background: var(--bgred);
+}
+
+.c1{
+    background: var(--bgorange);
+}
+
+.c2{
+    background: var(--bggreen);
+}
+
+.c3{
+    background: var(--bgbluee);
+}
+
+.cat0{
+    color: var(--red);
+}
+
+.cat1{
+    color: var(--orange);
+}
+
+.cat2{
+    color: var(--green);
+}
+
+.cat3{
+    color: var(--blue);
+}
+
+.score-grey{
+    color:var(--neutralblue27);
+    opacity: 50%;
+}
+
+.dark{
+    color: var(--neutralblue27);
+}
+
+
+.description, .points{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+}
+
+.description > p{
+    padding-left: 0.25rem;
+}
+
+button{
+    width: 100%;
+    padding-block: 1rem;
+    margin-top: 0.5rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background: var(--neutralblue27);
+    color: var(--neutral100);
+    border: none;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus{
+    background: linear-gradient(var(--bgblue),
+    var(--bgroyalblue));
+}
+
+.attribution{
+    margin-block: 1rem;
+    text-align: center; 
+    color: var(--neutralblue27); 
+    font-size: 0.8rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+@media (min-width: 729px){
+    html{
+        font-size: 18px;
+    }
+
+
+    article{
+        justify-content: center;
+    }
+
+    .container{
+        max-width: 730px;
+        transform: translateY(1.5rem);
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .overall{
+        border-radius: 1.8rem;
+        gap: 1.25rem;
+        padding-block:2.2rem;
+    }
+
+    .overall,
+    .summary{
+    width: 365px;
+    }
+
+    .circle{
+        width: 200px;
+    }
+
+    h1{
+        font-size: 1.3rem;
+    }
+    
+    h2.big {
+        font-size: 3.8rem;
+        font-weight: 800;
+    }
+    
+    h2.small{
+        font-size: 1.7rem;
+    }
+}
